@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Agende online sua lavagem no Lava-Rápido do Carille. Escolha o serviço e o melhor horário.">
+  <title>Lava-Rápido do Carille | Agende online</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="#inicio" aria-label="Lava-Rápido do Carille - início"><span class="brand-mark">✦</span><span><strong>LAVA-RÁPIDO</strong><small>DO CARILLE</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+  <nav id="nav"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#agendar">Agendar</a><a href="#sobre">Sobre</a></nav>
+  <a class="whatsapp top-whatsapp" id="headerWhatsApp" href="#" target="_blank" rel="noopener">◉ Fale conosco</a>
+</header>
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-overlay"></div>
+  <div class="hero-copy">
+    <span class="eyebrow light">SEU CARRO SEMPRE EM BOAS MÃOS</span>
+    <h1>Lava-Rápido<br><span>do Carille</span></h1>
+    <p>Mais que uma lavagem, é cuidado e qualidade para o seu veículo. Agende seu horário de forma rápida e sem complicação.</p>
+    <div class="hero-points"><span>✓ Qualidade no serviço</span><span>◷ Agendamento online</span><span>◉ Confirmação pelo WhatsApp</span></div>
+  </div>
+  <div class="booking-card" id="agendar">
+    <h2>Agende seu horário</h2><p class="muted">Escolha o serviço, veja os horários disponíveis e finalize seu agendamento.</p>
+    <div class="steps"><span class="active">1 <small>Serviço</small></span><i>→</i><span>2 <small>Data e horário</small></span><i>→</i><span>3 <small>Seus dados</small></span></div>
+    <form id="bookingForm">
+      <label for="service">Selecione o serviço</label>
+      <select id="service" name="serviceId" required></select>
+      <div class="form-grid">
+        <div><label for="date">Data</label><input id="date" type="date" required></div>
+        <div><label for="time">Horário disponível</label><select id="time" required disabled><option value="">Escolha uma data</option></select></div>
+      </div>
+      <div id="slotMessage" class="hint" aria-live="polite">Escolha uma data para consultar os horários.</div>
+      <label for="name">Seu nome</label><input id="name" name="name" autocomplete="name" placeholder="Nome completo" required>
+      <div class="form-grid">
+        <div><label for="phone">WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(11) 99999-9999" required></div>
+        <div><label for="vehicle">Veículo</label><input id="vehicle" name="vehicle" placeholder="Ex.: Honda Civic" required></div>
+      </div>
+      <label for="plate">Placa (opcional)</label><input id="plate" name="plate" placeholder="ABC-1234" maxlength="12">
+      <button class="button primary full" id="submitButton" type="submit">Confirmar agendamento <span>→</span></button>
+      <p class="fine-print">Ao agendar, você concorda em receber informações sobre sua reserva.</p>
+    </form>
+    <div id="result" class="result" hidden aria-live="polite"></div>
+  </div>
+</section>
+<section class="section services-section" id="servicos">
+  <div class="section-heading"><div><span class="eyebrow">NOSSOS SERVIÇOS</span><h2>Serviços completos para<br>o seu veículo</h2></div><p>Trabalhamos com atenção aos detalhes para entregar o melhor resultado para o seu carro.</p></div>
+  <div class="service-grid" id="serviceCards"></div>
+</section>
+<section class="why" id="sobre"><div class="why-content"><span class="eyebrow">POR QUE ESCOLHER O LAVA-RÁPIDO DO CARILLE?</span><h2>Seu carro em boas mãos!</h2><div class="benefits">
+  <article><span class="benefit-icon">♙</span><h3>Equipe cuidadosa</h3><p>Atendimento atencioso e dedicado.</p></article>
+  <article><span class="benefit-icon">✧</span><h3>Produtos de qualidade</h3><p>Cuidado especial para seu veículo.</p></article>
+  <article><span class="benefit-icon">▦</span><h3>Agendamento online</h3><p>Rápido, prático e organizado.</p></article>
+  <article><span class="benefit-icon">◉</span><h3>Confirmação no WhatsApp</h3><p>Receba os detalhes da sua reserva.</p></article>
+</div></div></section>
+<section class="how"><div><span class="eyebrow">SIMPLES ASSIM</span><h2>Como funciona?</h2><p class="muted">Em poucos passos, seu horário fica reservado.</p></div><div class="how-grid">
+  <article><span>🚘</span><b>1. Escolha o serviço</b><p>Selecione a lavagem ideal para seu carro.</p></article><article><span>▦</span><b>2. Veja os horários</b><p>Escolha a data e um horário disponível.</p></article><article><span>♙</span><b>3. Informe seus dados</b><p>Preencha seus dados e veículo.</p></article><article><span>◉</span><b>4. Receba a confirmação</b><p>Você recebe a confirmação pelo WhatsApp quando configurado.</p></article>
+</div></section>
+</main>
+<footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">✦</span><span><strong>LAVA-RÁPIDO</strong><small>DO CARILLE</small></span></a><p>Seu carro limpo, bonito<br>e pronto para ir mais longe!</p><div class="footer-links"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#agendar">Agendar</a><a href="#sobre">Sobre</a></div><div class="footer-contact"><a id="footerWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp: configure o número</a></div><small class="copyright">© <span id="year"></span> Lava-Rápido do Carille. Todos os direitos reservados.</small></footer>
+<script src="/app.js"></script>
+</body></html>
